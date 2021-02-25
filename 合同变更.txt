@@ -1,0 +1,15 @@
+合同变更
+ALTER TABLE t_etms_sign_contract ADD COLUMN `ecp_temp_ids` VARCHAR(200) DEFAULT null COMMENT '电子合同模板编号';
+
+ALTER TABLE `t_etms_sign_data_import` ADD COLUMN work_schedules VARCHAR(100) DEFAULT null COMMENT '工时制度';
+
+
+调度任务时间间隔设置为1小时
+配置文件
+#合同变更定时任务的任务id
+schedule.jobId.contractChange=2511
+
+
+
+@TODO
+调度重复执行问题
